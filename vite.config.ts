@@ -1,6 +1,5 @@
 import { templateCompilerOptions } from '@tresjs/core'
 import vue from '@vitejs/plugin-vue'
-import { resolve } from 'pathe'
 import UnoCSS from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
@@ -32,9 +31,6 @@ export default defineConfig({
     qrcode(),
   ],
   resolve: {
-    alias: {
-      '@tresjs/post-processing': resolve(__dirname, '../src/index.ts'),
-    },
     dedupe: ['three', '@tresjs/core'],
   },
 })
